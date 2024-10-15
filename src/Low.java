@@ -1,4 +1,4 @@
-class LowPriorityHandler extends TaskHandler {
+class Low extends TaskHandler {
     @Override
     public void handleTask(Task task) {
         if (task.getPriority() == TaskPriority.LOW) {

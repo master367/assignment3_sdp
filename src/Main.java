@@ -10,15 +10,15 @@ public class Main {
         Task task3 = new Task("Task 3", TaskPriority.HIGH);
 
 
-        TaskHandler lowPriorityHandler = new LowPriorityHandler();
-        TaskHandler mediumPriorityHandler = new MediumPriorityHandler();
-        TaskHandler highPriorityHandler = new HighPriorityHandler();
+        TaskHandler low = new Low();
+        TaskHandler medium = new Medium();
+        TaskHandler high = new High();
 
-        lowPriorityHandler.setNextHandler(mediumPriorityHandler);
-        mediumPriorityHandler.setNextHandler(highPriorityHandler);
+        low.setNextHandler(medium);
+        medium.setNextHandler(high);
 
 
-        TaskMediator mediator = new TaskProcessingMediator(lowPriorityHandler);
+        TaskMediator mediator = new TaskProcessingMediator(low);
 
 
         List<Task> taskList = new ArrayList<>();

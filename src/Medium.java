@@ -1,4 +1,4 @@
-class MediumPriorityHandler extends TaskHandler {
+class Medium extends TaskHandler {
     @Override
     public void handleTask(Task task) {
         if (task.getPriority() == TaskPriority.MEDIUM) {
